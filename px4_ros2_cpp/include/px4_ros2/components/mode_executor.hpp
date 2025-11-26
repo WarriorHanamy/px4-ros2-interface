@@ -41,7 +41,7 @@ public:
       ActivateAlways, ///< Allow the executor to always be activated (so it can arm the vehicle)
       ActivateImmediately, ///< Activate the mode and executor immediately after registration. Only use this for fully autonomous executors that also arm the vehicle
     };
-    Activation activation{Activation::ActivateOnlyWhenArmed};
+    Activation activation{Activation::ActivateOnlyWhenArmed}; // 默认值
 
     Settings & activate(Activation activation_option)
     {

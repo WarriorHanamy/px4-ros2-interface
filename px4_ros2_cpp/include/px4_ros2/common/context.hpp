@@ -28,7 +28,7 @@ public:
   virtual void addSetpointType(SetpointBase * setpoint) {}
   virtual void setRequirement(const RequirementFlags & requirement_flags) {}
 
-private:
+protected:
   rclcpp::Node & _node;
   const std::string _topic_namespace_prefix;
 };
