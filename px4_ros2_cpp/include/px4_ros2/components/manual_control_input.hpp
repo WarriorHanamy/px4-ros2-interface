@@ -49,6 +49,10 @@ public:
   float aux5() const {return _manual_control_setpoint.aux5;}
   float aux6() const {return _manual_control_setpoint.aux6;}
 
+  bool sticks_moving() const {return _manual_control_setpoint.sticks_moving;}
+  
+  uint16_t buttons() const {return _manual_control_setpoint.buttons;}
+
   bool isValid() const
   {
     return _manual_control_setpoint.valid &&
