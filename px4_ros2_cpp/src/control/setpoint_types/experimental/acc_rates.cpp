@@ -27,9 +27,9 @@ void AccRatesSetpointType::update(
   onUpdate();
 
   px4_msgs::msg::VehicleThrustAccSetpoint sp{};
-  sp.rates[0] = rate_setpoints_frd_rad(0);
-  sp.rates[1] = rate_setpoints_frd_rad(1);
-  sp.rates[2] = rate_setpoints_frd_rad(2);
+  sp.rates_sp[0] = rate_setpoints_frd_rad(0);
+  sp.rates_sp[1] = rate_setpoints_frd_rad(1);
+  sp.rates_sp[2] = rate_setpoints_frd_rad(2);
   sp.thrust_acc_sp = thrust_setpoint;
   sp.timestamp = 0; // Let PX4 set the timestamp
   _vehicle_acc_rates_setpoint_pub->publish(sp);
