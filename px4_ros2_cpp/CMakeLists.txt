@@ -75,6 +75,7 @@ set(HEADER_FILES
         include/px4_ros2/control/setpoint_types/fixedwing/lateral_longitudinal.hpp
         include/px4_ros2/control/setpoint_types/experimental/attitude.hpp
         include/px4_ros2/control/setpoint_types/experimental/rates.hpp
+        include/px4_ros2/control/setpoint_types/experimental/acc_rates.hpp
         include/px4_ros2/control/setpoint_types/experimental/trajectory.hpp
         include/px4_ros2/control/setpoint_types/experimental/rover/position.hpp
         include/px4_ros2/control/setpoint_types/experimental/rover/speed_attitude.hpp
@@ -126,6 +127,7 @@ add_library(px4_ros2_cpp
         src/control/setpoint_types/direct_actuators.cpp
         src/control/setpoint_types/experimental/attitude.cpp
         src/control/setpoint_types/experimental/rates.cpp
+        src/control/setpoint_types/experimental/acc_rates.cpp
         src/control/setpoint_types/experimental/rover/position.cpp
         src/control/setpoint_types/experimental/rover/speed_attitude.cpp
         src/control/setpoint_types/experimental/rover/speed_rate.cpp
