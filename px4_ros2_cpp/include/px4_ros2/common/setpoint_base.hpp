@@ -34,6 +34,7 @@ public:
       control_mode.flag_control_altitude_enabled = altitude_enabled;
       control_mode.flag_control_allocation_enabled = control_allocation_enabled;
       control_mode.flag_control_climb_rate_enabled = climb_rate_enabled;
+      control_mode.flag_control_offboard_enabled = offboard_mode_enabled;
     }
 
     bool control_allocation_enabled{true};
@@ -45,6 +46,7 @@ public:
     bool position_enabled{true};
     bool local_position_is_optional{false};
     bool climb_rate_enabled{false};
+    bool offboard_mode_enabled{false};
   };
 
   explicit SetpointBase(Context & context)
