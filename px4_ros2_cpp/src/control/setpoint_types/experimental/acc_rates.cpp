@@ -13,9 +13,9 @@ AccRatesSetpointType::AccRatesSetpointType(Context & context)
 : SetpointBase(context), _node(context.node())
 {
   _vehicle_acc_rates_setpoint_pub =
-    context.node().create_publisher<px4_msgs::msg::VehicleThrustAccSetpoint>(
+    context.node().create_publisher<px4_msgs::msg::VehicleAccRatesSetpoint>(
     context.topicNamespacePrefix() + "fmu/in/vehicle_thrust_acc_setpoint" +
-    px4_ros2::getMessageNameVersion<px4_msgs::msg::VehicleThrustAccSetpoint>(),
+    px4_ros2::getMessageNameVersion<px4_msgs::msg::VehicleAccRatesSetpoint>(),
     1);
 }
 
@@ -26,12 +26,12 @@ void AccRatesSetpointType::update(
 {
   onUpdate();
 
-  px4_msgs::msg::VehicleThrustAccSetpoint sp{};
+  px4_msgs::msg::VehicleAccRatesSetpoint sp{};
   sp.rates_sp[0] = rate_setpoints_frd_rad(0);
   sp.rates_sp[1] = rate_setpoints_frd_rad(1);
   sp.rates_sp[2] = rate_setpoints_frd_rad(2);
 
-  sp.thrust_acc_sp = thrust_setpoint;
+  sp.thrust_axis_acc_sp = thrust_setpoint;
   sp.timestamp = 0; // Let PX4 set the timestamp
   _vehicle_acc_rates_setpoint_pub->publish(sp);
 }

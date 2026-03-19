@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <px4_msgs/msg/vehicle_thrust_acc_setpoint.hpp>
+#include <px4_msgs/msg/vehicle_acc_rates_setpoint.hpp>
 #include <Eigen/Core>
 
 #include <px4_ros2/common/setpoint_base.hpp>
@@ -36,7 +36,7 @@ void update(
 
 private:
   rclcpp::Node & _node;
-  rclcpp::Publisher<px4_msgs::msg::VehicleThrustAccSetpoint>::SharedPtr _vehicle_acc_rates_setpoint_pub;
+  rclcpp::Publisher<px4_msgs::msg::VehicleAccRatesSetpoint>::SharedPtr _vehicle_acc_rates_setpoint_pub;
 };
 
 /** @}*/
