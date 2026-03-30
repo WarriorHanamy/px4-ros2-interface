@@ -14,7 +14,7 @@ AccRatesSetpointType::AccRatesSetpointType(Context & context)
 {
   _vehicle_acc_rates_setpoint_pub =
     context.node().create_publisher<px4_msgs::msg::VehicleAccRatesSetpoint>(
-    context.topicNamespacePrefix() + "fmu/in/vehicle_thrust_acc_setpoint" +
+    context.topicNamespacePrefix() + "fmu/in/vehicle_acc_rates_setpoint" +
     px4_ros2::getMessageNameVersion<px4_msgs::msg::VehicleAccRatesSetpoint>(),
     1);
 }
